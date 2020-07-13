@@ -19,7 +19,6 @@ class PublicIngredientsApiTests(TestCase):
     def test_login_required(self):
         """Test that the login is required to access the endpoint"""
         res = self.client.get(INGREDIENTS_URL)
-
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
